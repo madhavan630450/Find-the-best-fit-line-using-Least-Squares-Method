@@ -6,7 +6,7 @@ To implement univariate Linear Regression to fit a straight line using least squ
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
+## Algorithm:
 1. Get the independent variable X and dependent variable Y.
 2. Calculate the mean of the X -values and the mean of the Y -values.
 3. Find the slope m of the line of best fit using the formula. 
@@ -17,50 +17,34 @@ To implement univariate Linear Regression to fit a straight line using least squ
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
 ## Program:
+### Program to implement univariate Linear Regression to fit a straight line using least squares.
+### Developed by: MARIMUTHU MATHAVAN 
+### RegisterNumber: 212224230153
 ```
-/*
 import numpy as np
 import matplotlib.pyplot as plt
-
-x=np.array(eval(input()))
-y=np.array(eval(input()))
-
-from re import X
-x_mean=np.mean(x)
-y_mean=np.mean(y)
-
-print(x_mean)
-print(y_mean)
-
-num,denom=0,0
-
-for i in range(len(x)):
-  num+= ((x[i]-x_mean)*(y[i]-y_mean))
-  denom+=(x[i]-x_mean)**2
-
-print(num)
-print(denom)
+X=np.array(eval(input()))
+Y=np.array(eval(input()))
+X_mean=np.mean(X)
+Y_mean=np.mean(Y)
+num=0  
+denom=0
+for i in range (len(X)):
+    num+=(X[i]-X_mean)*(Y[i]-Y_mean)
+    denom+=(X[i]-X_mean)**2
 m=num/denom
-b=y_mean-m*(x_mean)
-
-print(m)
-print(b)
-y_predicted=m*x+b
-y_predicted
-
-plt.scatter(x,y,color='black')
-plt.plot(x,y_predicted,color='yellow')
+b=Y_mean-m*X_mean
+print("Slope =",m)
+print("Intercept =",b)
+Y_predicted=m*X+b
+print("Predicted Values =",Y_predicted)
+plt.scatter(X,Y)
+plt.plot(X,Y_predicted,color='red')
 plt.show()
-
-print(m*3+b)
-
-Developed by: MARIMUTHU MATHAVAN
-RegisterNumber: 212224230153 
-*/
 ```
 
 ## Output:
-![WhatsApp Image 2025-03-06 at 20 30 22_95edcdd9](https://github.com/user-attachments/assets/7529b904-db05-47db-8dd3-2ea46e0ff3b6)
+![image](https://github.com/user-attachments/assets/e638685c-8ccb-4f85-8ca2-3b5c75f7c722)
 
 
 
